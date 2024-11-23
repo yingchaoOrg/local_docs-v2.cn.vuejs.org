@@ -6,15 +6,15 @@
 
 
 ## Docker操作
-docker build . -t yingchao/local_doc-v2-cn-vue-org
+docker build . -t yingchao/local_docs-v2.cn.vuejs.org
 
-docker  stop local_doc-v2-cn-vue-org
-docker  rm local_doc-v2-cn-vue-org
+docker  stop local_docs-v2.cn.vuejs.org
+docker  rm local_docs-v2.cn.vuejs.org
 
-docker run -it  --name local_doc-v2-cn-vue-org -p 80 -d --rm -v ./:/home/node/www yingchao/local_doc-v2-cn-vue-org:latest
+docker run -it  --name local_docs-v2.cn.vuejs.org -p 80 -d --rm -v ./:/home/node/www yingchao/local_docs-v2.cn.vuejs.org:latest
 
 
-docker  exec -it  local_doc-v2-cn-vue-org  bash
+docker  exec -it  local_docs-v2.cn.vuejs.org  bash
 
 
 ## bash脚本
