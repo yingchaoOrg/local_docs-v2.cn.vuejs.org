@@ -6,12 +6,12 @@
 
 
 ## Docker操作
-docker build . -t yingchao/local_docs-v2.cn.vuejs.org
+docker build . -t ghcr.io/yingchaoorg/local_docs-v2.cn.vuejs.org:master
 
 docker  stop local_docs-v2.cn.vuejs.org
 docker  rm local_docs-v2.cn.vuejs.org
 
-docker run -it  --name local_docs-v2.cn.vuejs.org -p 80 -d --rm -v ./:/home/node/www yingchao/local_docs-v2.cn.vuejs.org:latest
+docker run -it  --name local_docs-v2.cn.vuejs.org -p 34806:80 -d --rm -v ./:/home/node/www ghcr.io/yingchaoorg/local_docs-v2.cn.vuejs.org:master
 
 
 docker  exec -it  local_docs-v2.cn.vuejs.org  bash
@@ -22,14 +22,11 @@ docker  exec -it  local_docs-v2.cn.vuejs.org  bash
 ```bash
 
 #!/bin/bash
-npm install 
 
-npm run update:all
+Header always set Content-Security-Policy "script-src 'self'"
+add_header Content-Security-Policy "script-src 'self'";
 
-npm run build:all
-
-npm run build:docs
-
+<meta http-equiv="content-security-policy" content="策略集">
 
 
 ```
