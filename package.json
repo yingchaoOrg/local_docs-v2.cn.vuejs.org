@@ -2,7 +2,7 @@
   "name": "v2.cn.vuejs.org",
   "private": true,
   "hexo": {
-    "version": "6.2.0"
+    "version": "6.3.0"
   },
   "scripts": {
     "dev": "node _scripts/sync-sponsors.js && hexo server",
